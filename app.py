@@ -5,13 +5,18 @@ import sqlite3
 from flask import *
 from flask_login import *
 from flask_login import LoginManager
-
+from os.path import exists, dirname
+from os import mkdir
 from hashed import hashed
 from misc import *
 from user import User
 
 USERSDB = 'databases/users.db'
 QUIZZESDB = 'databases/quizzes.db'
+if dirname(USERSDB) and not exists(dirname(USERSDB)):
+    mkdir(dirname(USERSDB))
+if dirname(QUIZZESDB) and not exists(dirname(QUIZZESDB)):
+    mkdir(dirname(QUIZZESDB))
 
 app = Flask(__name__, '/', 'static')
 login_manager = LoginManager()
