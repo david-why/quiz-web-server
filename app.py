@@ -47,7 +47,7 @@ quizzes_cur = quizzes_conn.cursor()
 quizzes_cur.execute('''CREATE TABLE IF NOT EXISTS "quizzes" (
 	"id"	INTEGER NOT NULL UNIQUE,
 	"questions"	INTEGER NOT NULL,
-	"object"	BLOB NOT NULL,
+	"quiz"	BLOB NOT NULL,
 	PRIMARY KEY("id" AUTOINCREMENT)
 )''')
 quizzes_conn.commit()
