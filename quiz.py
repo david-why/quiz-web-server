@@ -14,6 +14,7 @@ class Quiz:
         * `List[str] | None`: options for question whose `type=0`, `None` 
             elsewise
     """
+
     def __init__(self):
         self.questions: List[Tuple[int, str, Optional[List[str]]]] = []
 
@@ -77,5 +78,8 @@ class Quiz:
 
 if __name__ == '__main__':
     q = Quiz()
-    q.add_questions(0, 'How are you?', ['Good!', 'Happy!', 'Nice!'], 1, 'How\'s the weather today?', None)
+    q.add_questions(
+        0, 'How are you?', ['Good!', 'Happy!', 'Nice!'],
+        1, 'How\'s the weather today?', None
+    )
     print(q.get_questions_html(0, 1))
