@@ -3,8 +3,8 @@
 <head>
     <script>
         window.alert("{{ msg }}");
-        {% if redirect %}window.location.replace("{{ redirect }}");
-        {% else %}window.history.back();{% endif %}
+        {% if redirect %} window.location.replace("{{ redirect }}");
+        {% else %} window.history.back(); {% endif %}
     </script>
 </head>
 
