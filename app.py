@@ -128,11 +128,6 @@ def signup_page():
     return alert('Sign up complete, please login', '/login')
 
 
-@app.route('/editor')
-def editor_page():
-    return render_template('editor.html')
-
-
 if __name__ == '__main__':
     app.secret_key = 'gjtnc kvdbfvh cvjhbdfhnjgkfrhkgvjdkhfyenrtby5tgvutrh ygtvytrguthn'
     app.run('0.0.0.0', 8008, True)
